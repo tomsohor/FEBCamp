@@ -38,13 +38,11 @@
   text-align: center;
   color: #2c3e50;
 }
-
 #nav {
   padding: 30px;
   display: flex;
   justify-content: space-around;
 }
-
 #nav a {
   font-weight: bold;
   color: #2c3e50;
@@ -65,7 +63,6 @@
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -75,7 +72,6 @@
   padding: 12px 16px;
   z-index: 1;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
