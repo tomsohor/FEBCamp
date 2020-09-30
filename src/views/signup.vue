@@ -4,7 +4,7 @@
       <v-card tile="" class="apt1">
         <v-row align="center" justify="center">
           <v-col>
-            <v-card-title class="card-title">Login</v-card-title>
+            <v-card-title class="card-title">Sign Up</v-card-title>
             <v-divider />
             <form>
               <v-col cols="12" sm="12">
