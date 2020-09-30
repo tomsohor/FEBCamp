@@ -1,19 +1,10 @@
 <template>
   <div class="home">
-    <div class="banner">
-      <v-parallax src="../assets/central-market.jpg" height="500"
-        ><v-card-text align="start" class="bannertext"
-          >Over 2800 apartment available From a normal apartment to a high class
-          level of apartment for rent from all the area in Phnom Penh.Over 2800
-          apartment available From a normal apartment to a high class level
-        </v-card-text></v-parallax
-      >
-    </div>
     <v-container class="apartment">
       <v-card tile="" class="apt1">
         <v-row align="center" justify="center">
           <v-col class="shrink">
-            <v-img src="../assets/room.jpg" max-width="500"></v-img>
+            <v-img src="../assets/room.jpg" max-width="500" class="img"></v-img>
           </v-col>
           <v-col>
             <v-card-title class="card-title">Apartments</v-card-title>
@@ -27,19 +18,21 @@
         </v-row>
       </v-card>
     </v-container>
-    <v-container class="rental">
-      <v-card tile="">
+    <v-container class="vision">
+      <v-card tile="" height="400" class="v1">
         <v-row align="start">
           <v-col>
-            <v-card-title class="card-title">Rental</v-card-title>
+            <v-card-title class="card-title">Our Vision</v-card-title>
             <v-divider />
             <v-card-text align="start" class="card-text"
               >Over 2800 apartment available From a normal apartment to a high
               class level of apartment for rent from all the area in Phnom
+              Penh.Over 2800 apartment available From a normal apartment to a
+              high class level of apartment for rent from all the area in Phnom
               Penh.</v-card-text
             > </v-col
           ><v-col class="shrink">
-            <v-img src="../assets/room.jpg" max-width="500"></v-img>
+            <v-img src="../assets/map.png" max-width="350"></v-img>
           </v-col>
         </v-row>
       </v-card>
@@ -63,17 +56,27 @@ export default {
 }
 .card-text {
   font-size: 25px;
+  line-height: 30px;
+}
+.home {
+  margin-top: 40px;
+}
+.img {
+  margin: 70px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 }
 .apt1 {
-  margin: 30px 0;
+  background-color: #c4c4c4;
+  border-radius: 10px;
 }
-.bannertext {
-  width: 100%;
-  background-color: #55617e;
-  font-size: 30px;
-  line-height: 50px;
+.vision {
+  margin-top: 30px;
 }
-.card-text {
-  line-height: 30px;
+.v1 {
+  background-color: #9af271;
+  border-radius: 10px;
+  padding: 15px;
 }
 </style>

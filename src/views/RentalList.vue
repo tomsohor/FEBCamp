@@ -188,6 +188,7 @@ img {
 .info {
   margin-left: 20px;
   margin-bottom: 10px;
+  margin-top: 15px;
   text-align: left;
   padding: 0 10px;
   display: flex;
@@ -216,14 +217,14 @@ img {
 }
 .item-header {
   background-color: #000;
-  height: 40px;
+  height: 60px;
   font-size: 30px;
   color: white;
   text-transform: uppercase;
   padding-top: 10px;
   position: fixed;
-  width: 81.5%;
-  margin-top: -20px;
+  width: 78%;
+  margin-top: -30px;
 }
 ::-webkit-scrollbar {
   display: none;

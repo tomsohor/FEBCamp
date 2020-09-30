@@ -1,8 +1,7 @@
 <template>
-<v-footer padless>
+  <v-footer padless>
     <v-card class="flex" flat tile>
       <v-card-title class="teal layout justify-center">
-        <strong class="subheading">Get connected with us on social networks: </strong>
         <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
           <v-icon size="24px">
             {{ icon }}
@@ -11,6 +10,13 @@
       </v-card-title>
 
       <v-card-text class="py-2 white--text text-center">
+        <v-col class="shrink">
+          <v-img
+            src="../assets/footer.jpg"
+            max-width="100%"
+            class="img"
+          ></v-img>
+        </v-col>
         {{ new Date().getFullYear() }} — <strong>Homon</strong>
       </v-card-text>
     </v-card>
@@ -18,16 +24,15 @@
 </template>
 
 <script>
-import { mdiFacebook } from '@mdi/js';
+import { mdiFacebook } from "@mdi/js";
 export default {
-    data(){
-        return{
-            icons: [mdiFacebook]
-        }
-    }
-}
+  data() {
+    return {
+      icons: [mdiFacebook],
+    };
+  },
+};
 </script>
 
 <style>
-
 </style>
