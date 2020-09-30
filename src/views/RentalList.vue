@@ -2,7 +2,7 @@
   <div class="container">
     <div class="navbar"></div>
     <div class="search-block">
-      <button class="apt">Apartment</button>
+      <button class="apt">Room</button>
       <div class="search">
         <input type="text" placeholder="search" /><button class="btn">
           <i class="fa fa-search"></i>
@@ -10,7 +10,6 @@
       </div>
     </div>
     <div class="items-block">
-      <div class="item-header">room</div>
       <div class="item-row">
         <div class="item-col">
           <img src="../assets/room.jpg" alt="room" />
@@ -22,7 +21,9 @@
             </div>
             <div class="info-btn">
               <button class="rent-btn">Rent</button><br />
-              <button class="view-btn">View detail</button>
+              <button class="view-btn">
+                <router-link to="/room/detail">View Details</router-link>
+              </button>
             </div>
           </div>
         </div>
@@ -36,7 +37,9 @@
             </div>
             <div class="info-btn">
               <button class="rent-btn">Rent</button><br />
-              <button class="view-btn">View detail</button>
+              <button class="view-btn">
+                <router-link to="/room/detail">View Details</router-link>
+              </button>
             </div>
           </div>
         </div>
@@ -52,7 +55,9 @@
             </div>
             <div class="info-btn">
               <button class="rent-btn">Rent</button><br />
-              <button class="view-btn">View detail</button>
+              <button class="view-btn">
+                <router-link to="/room/detail">View Details</router-link>
+              </button>
             </div>
           </div>
         </div>
@@ -66,7 +71,9 @@
             </div>
             <div class="info-btn">
               <button class="rent-btn">Rent</button><br />
-              <button class="view-btn">View detail</button>
+              <button class="view-btn">
+                <router-link to="/room/detail">View Details</router-link>
+              </button>
             </div>
           </div>
         </div>
@@ -82,7 +89,9 @@
             </div>
             <div class="info-btn">
               <button class="rent-btn">Rent</button><br />
-              <button class="view-btn">View detail</button>
+              <button class="view-btn">
+                <router-link to="/room/detail">View Details</router-link>
+              </button>
             </div>
           </div>
         </div>
@@ -215,17 +224,7 @@ img {
   outline: none;
   position: relative;
 }
-.item-header {
-  background-color: #000;
-  height: 60px;
-  font-size: 30px;
-  color: white;
-  text-transform: uppercase;
-  padding-top: 10px;
-  position: fixed;
-  width: 78%;
-  margin-top: -30px;
-}
+
 ::-webkit-scrollbar {
   display: none;
 }
