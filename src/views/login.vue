@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <v-container class="apartment">
-      <v-card tile="" class="apt1">
+    <v-container class="apartment" >
+      <v-card tile="" class="apt1" >
         <v-row align="center" justify="center">
           <v-col>
             <v-card-title class="card-title">Login</v-card-title>
@@ -43,18 +43,12 @@
         </v-row>
       </v-card>
     </v-container>
-
-    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from "../components/Footer";
 export default {
   name: "Home",
-  components: {
-    Footer,
-  },
   data() {
     return {
       show1: false,

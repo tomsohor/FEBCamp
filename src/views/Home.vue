@@ -1,15 +1,15 @@
 <template>
   <div class="home">
     <div class="banner">
-      <v-parallax src="../assets/central-market.jpg" height="500"
-        ><v-card-text align="start" class="bannertext"
-          >Over 2800 apartment available From a normal apartment to a high class
-          level of apartment for rent from all the area in Phnom Penh.Over 2800
-          apartment available From a normal apartment to a high class level
-        </v-card-text></v-parallax
-      >
+      <v-parallax src="../assets/central-market.jpg" height="500">
+        <v-card-text align="center" class="bannertext">
+          HAVING TROUBLE LOOKING FOR RENTAL ROOM IN <br/> <br/>
+          <strong id="PP"> PNHOM PENH? </strong> <br/><br/>
+          Don’t worry! With HOMON we bring all the rental room to your hand. <br/>
+          <strong id="book"> Book your ROOM in just ONE CLICK! </strong>
+        </v-card-text>
+      </v-parallax>
     </div>
-<<<<<<< HEAD
     <v-container class="apartment" >
         <v-card tile="" max-width="1000">
           <v-row>
@@ -24,70 +24,40 @@
           </v-row>
         </v-card>
     </v-container>
-    <v-container class="apartment" >
+    <v-container class="rental-room" >
         <v-card tile="" max-width="1000">
           <v-row>
+            <v-col>
+              <v-card-title class="card-title">Rental Room</v-card-title>
+              <v-divider/>
+              <v-card-text align="start" class="card-text">24000 normal rental room from the cheapest to the best whichavailable in all location and contact to owner with 1 click.
+              </v-card-text>
+            </v-col>
             <v-col class="shrink">
               <v-img src="../assets/room.jpg" max-width="400"></v-img>
             </v-col>
-            <v-col>
-              <v-card-title class="card-title">Apartments</v-card-title>
-              <v-divider/>
-              <v-card-text align="start" class="card-text">Over 2800 apartment available From a normal apartment to a high class level of apartment for rent from all the area in Phnom Penh.</v-card-text>
-            </v-col>
           </v-row>
         </v-card>
-=======
-    <v-container class="apartment">
-      <v-card tile="" class="apt1">
-        <v-row align="center" justify="center">
-          <v-col class="shrink">
-            <v-img src="../assets/room.jpg" max-width="500"></v-img>
-          </v-col>
-          <v-col>
-            <v-card-title class="card-title">Apartments</v-card-title>
-            <v-divider />
-            <v-card-text align="start" class="card-text"
-              >Over 2800 apartment available From a normal apartment to a high
-              class level of apartment for rent from all the area in Phnom
-              Penh.</v-card-text
-            >
-          </v-col>
-        </v-row>
-      </v-card>
     </v-container>
-    <v-container class="rental">
-      <v-card tile="">
-        <v-row align="start">
-          <v-col>
-            <v-card-title class="card-title">Rental</v-card-title>
-            <v-divider />
-            <v-card-text align="start" class="card-text"
-              >Over 2800 apartment available From a normal apartment to a high
-              class level of apartment for rent from all the area in Phnom
-              Penh.</v-card-text
-            > </v-col
-          ><v-col class="shrink">
-            <v-img src="../assets/room.jpg" max-width="500"></v-img>
-          </v-col>
-        </v-row>
-      </v-card>
->>>>>>> 467d7148c1ca44db9fa28d0d0e7df8aa7a3d1733
-    </v-container>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from "../components/Footer";
+
 export default {
   name: "Home",
   components: {
-    Footer,
+
   },
 };
 </script>
 <style scoped>
+#PP {
+  font-size: 100px;
+}
+#book{
+  font-size: 40px;
+}
 .card-title {
   font-size: 50px;
 }
@@ -99,7 +69,7 @@ export default {
 }
 .bannertext {
   width: 100%;
-  background-color: #55617e;
+  background-color:rgba(25, 42, 86, 0.5);
   font-size: 30px;
   line-height: 50px;
 }

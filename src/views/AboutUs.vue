@@ -4,15 +4,18 @@
       <v-card tile="" class="apt1">
         <v-row align="center" justify="center">
           <v-col class="shrink">
-            <v-img src="../assets/room.jpg" max-width="500" class="img"></v-img>
+            <v-img src="../assets/homon.jpg" max-width="500" class="img"></v-img>
           </v-col>
           <v-col>
-            <v-card-title class="card-title">Apartments</v-card-title>
+            <v-card-title class="card-title">What is HOMON?</v-card-title>
             <v-divider />
-            <v-card-text align="start" class="card-text"
-              >Over 2800 apartment available From a normal apartment to a high
-              class level of apartment for rent from all the area in Phnom
-              Penh.</v-card-text
+            <v-card-text align="start" class="card-text">
+              HOMON is a Cambodia website established in 2020 
+              by a group of colleagues from Kirirom Institute of Technology. 
+              Currently with almost 30,000 room and apartment available on
+              our website we had help almost 15,000 students, workers 
+              and everyone to find their room/apartment. 
+            </v-card-text
             >
           </v-col>
         </v-row>
@@ -37,17 +40,12 @@
         </v-row>
       </v-card>
     </v-container>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from "../components/Footer";
 export default {
   name: "Home",
-  components: {
-    Footer,
-  },
 };
 </script>
 <style scoped>
@@ -57,9 +55,6 @@ export default {
 .card-text {
   font-size: 25px;
   line-height: 30px;
-}
-.home {
-  margin-top: 40px;
 }
 .img {
   margin: 70px;

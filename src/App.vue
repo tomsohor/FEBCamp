@@ -1,43 +1,21 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <div class="pic">
-        <v-col class="shrink">
-          <router-link class="nav1" to="/">
-            <v-img src="./assets/logo.svg" class="logo"></v-img>
-          </router-link>
-        </v-col>
-      </div>
-      <div class="nav-route">
-        <router-link class="nav1" to="/"> Home</router-link>
-        <div class="dropdown">
-          <span>Type</span>
-          <div class="dropdown-content">
-            <router-link class="nav1" to="/room">Room</router-link><br />
-            <hr />
-            <router-link class="nav1" to="/apartment">Apartment</router-link>
-          </div>
-        </div>
-
-        <router-link class="nav1" to="/about">About Us</router-link>
-      </div>
-      <div class="sign">
-        <button>
-          <div class="dropdown">
-            <span class="inup">Log in / Sign up</span>
-            <div class="dropdown-content">
-              <router-link class="nav1" to="/login">login</router-link><br />
-              <hr />
-              <router-link class="nav1" to="/signup">signup</router-link>
-            </div>
-          </div>
-        </button>
-      </div>
-    </div>
+  <div id="app" data-app>
+    <Navbar/>
     <router-view />
+    <Footer/>
   </div>
 </template>
+<script>
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
+export default{
+  components: {
+    Navbar,
+    Footer,
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -51,7 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #008b8b;
+  background-color:#B9D7F3;
 }
 #nav a {
   font-weight: bold;
@@ -97,7 +75,7 @@ hr {
 }
 .logo {
   width: 100%;
-  height: 60px;
+  height: 100%;
   object-fit: scale-down;
   cursor: pointer;
 }
