@@ -2,33 +2,41 @@
 <template>
   <v-container>
     <v-row>
-      <v-col lg="4"
-          v-for="(apartment, index) in apartments"
-          :key="apartment._id"
-          :index="index"
-          :item="apartment" >
+      <v-col
+        lg="4"
+        v-for="(apartment, index) in apartments"
+        :key="apartment._id"
+        :index="index"
+        :item="apartment"
+      >
         <v-card class="mx-auto" max-width="344">
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px"></v-img>
-          <v-card-title> {{apartment.code}} </v-card-title>
-          <v-card-subtitle align="start">{{`$${apartment.price}/Month`}}</v-card-subtitle>
+          <v-img
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="200px"
+          ></v-img>
+          <v-card-title> {{ apartment.code }} </v-card-title>
+          <v-card-subtitle align="start">{{
+            `$${apartment.price}/Month`
+          }}</v-card-subtitle>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn @click="snackbar = true">
-              Rent
-            </v-btn>
+            <v-btn @click="snackbar = true"> Rent </v-btn>
             <v-snackbar v-model="snackbar">
-              Please contact: {{apartment.contact}}
+              Please contact: {{ apartment.contact }}
               <template v-slot:action="{ attrs }">
-                <v-btn color="pink" text v-bind="attrs" @click="snackbar = false">
+                <v-btn
+                  color="pink"
+                  text
+                  v-bind="attrs"
+                  @click="snackbar = false"
+                >
                   Got it
                 </v-btn>
               </template>
             </v-snackbar>
             <v-dialog v-model="dialog" width="500">
               <template v-slot:activator="{ on, attrs }">
-                <v-btn dark v-bind="attrs" v-on="on">
-                  View Detail
-                </v-btn>
+                <v-btn dark v-bind="attrs" v-on="on"> View Detail </v-btn>
               </template>
               <v-card>
                 <v-card-title class="headline grey lighten-2">
@@ -36,11 +44,11 @@
                 </v-card-title>
 
                 <v-card-text align="start">
-                  <strong>Price:</strong> ${{apartment.price}}/Month<br>
-                  <strong>Location:</strong> {{apartment.location}} <br>
-                  <strong>Address:</strong> {{apartment.address}} <br>
-                  <strong>Detail:</strong> {{apartment.detail}} <br>
-                  <strong>Contact:</strong> {{apartment.contact}} <br>
+                  <strong>Price:</strong> ${{ apartment.price }}/Month<br />
+                  <strong>Location:</strong> {{ apartment.location }} <br />
+                  <strong>Address:</strong> {{ apartment.address }} <br />
+                  <strong>Detail:</strong> {{ apartment.detail }} <br />
+                  <strong>Contact:</strong> {{ apartment.contact }} <br />
                 </v-card-text>
               </v-card>
             </v-dialog>
@@ -51,25 +59,22 @@
   </v-container>
 </template>
 <script>
-import apartmentService from '../apartmentService'
+import Service from "../Service";
+const data = new Service();
 export default {
-  data(){
-    return{
+  data() {
+    return {
       apartments: [],
-      error: '',
+      error: "",
       snackbar: false,
-    }
+    };
   },
-  async created(){
-    try{
-      this.apartments = await apartmentService.getApartments()
-    }catch(error){
-      this.error = error.message
-    }
-  }
-  
-}
+  created() {
+    data.getApartments().then((res) => {
+      this.apartments = res.data;
+    });
+  },
+};
 </script>
 <style scoped>
-
 </style>
