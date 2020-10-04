@@ -10,6 +10,7 @@ app.use(cors())
 const rooms = require('./routes/api/rooms')
 app.use('/api/rooms', rooms)
 
+
 const apartments = require('./routes/api/apartments')
 app.use('/api/apartments', apartments)
 
